@@ -2,7 +2,9 @@ import React from 'react';
 
 
 const Filter = () => {
-  console.log('filter');
+  return (
+    <div></div>
+  );
 };
 
 export default Filter;

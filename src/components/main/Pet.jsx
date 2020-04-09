@@ -2,7 +2,9 @@ import React from 'react';
 
 
 const Pet = () => {
-  console.log('Pet');
+  return (
+    <div></div>
+  );
 };
 
 export default Pet;

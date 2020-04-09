@@ -1,8 +1,8 @@
 import React from 'react';
 
 
-const Links = () => {
-  console.log('Links');
-};
+const Links = () => (
+  <div />
+);
 
 export default Links;

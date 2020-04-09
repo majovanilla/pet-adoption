@@ -2,7 +2,9 @@ import React from 'react';
 
 
 const Pictures = () => {
-  console.log('Pictures');
+  return (
+    <div></div>
+  );
 };
 
 export default Pictures;
