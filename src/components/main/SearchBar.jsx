@@ -4,12 +4,10 @@ import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 
 const SearchBar = () => (
-  <div>
-    <Form inline>
-      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button variant="outline-info">Search</Button>
-    </Form>
-  </div>
+  <Form.Row className="my-3 justify-content-center">
+    <FormControl type="text" placeholder="My pet is..." className="px-2 mx-2 col-7" />
+    <Button variant="outline-info" className="mx-2 col-4">Find my pet</Button>
+  </Form.Row>
 );
 
 export default SearchBar;

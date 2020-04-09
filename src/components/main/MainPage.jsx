@@ -4,11 +4,11 @@ import Filter from './Filter';
 import Pet from './Pet';
 
 const MainPage = () => (
-  <div>
+  <main>
     <SearchBar />
     <Filter />
     <Pet />
-  </div>
+  </main>
 );
 
 export default MainPage;
