@@ -1,14 +1,16 @@
-const initState = [];
+const initState = "ALL";
 
-const petListReducer = (state = initState, action) => {
+const filterReducer = (state = initState, action) => {
   switch (action.type) {
-    case 'ADD_FAVORITE':
+    case 'ALL':
       return state;
-    case 'NEW_SEARCH':
+    case 'CATS':
+      return state;
+    case 'DOGS':
       return state;
     default:
       return state;
   }
 };
 
-export default petListReducer;
+export default filterReducer;
