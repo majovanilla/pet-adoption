@@ -3,7 +3,7 @@ import SearchBar from './SearchBar';
 import Filter from './Filter';
 import Pet from './Pet';
 
-const MainPage = () => (
+const List = () => (
   <main>
     <SearchBar />
     <Filter />
@@ -11,4 +11,4 @@ const MainPage = () => (
   </main>
 );
 
-export default MainPage;
+export default List;

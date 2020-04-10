@@ -1,11 +1,11 @@
 import React from 'react';
-import MainPage from './main/MainPage';
+import List from './main/List';
 import Navbar from './Navbar';
 
 const App = () => (
   <div className="App">
     <Navbar />
-    <MainPage />
+    <List />
   </div>
 );
 
