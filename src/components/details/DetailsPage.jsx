@@ -3,7 +3,7 @@ import Description from './Description';
 import Links from './Links';
 import ImgCarousel from './ImgCarousel';
 
-const MainPage = () => (
+const DetailsPage = () => (
   <div>
     <ImgCarousel />
     <Description />
@@ -11,4 +11,4 @@ const MainPage = () => (
   </div>
 );
 
-export default MainPage;
+export default DetailsPage;
