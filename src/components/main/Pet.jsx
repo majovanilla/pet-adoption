@@ -1,23 +1,27 @@
 import React from 'react';
-import ImgCarousel from '../details/ImgCarousel';
-import Description from '../details/Description';
-import Links from '../details/Links';
+import { BrowserRouter, Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
+const Pet = ({ pet }) => {
+  const {
+    id, url, type, species, age, gender, size, name, photos, status, tags,
+  } = pet;
+  return (
+    <BrowserRouter>
+      <Link to="/">
+        <article className="pet-card">
+          <img src={photos} alt="Pet" />
+          <h3>{name}</h3>
 
-const Pet = ({
-  id,
-  url,
-  type,
-  species,
-  age,
-  gender,
-  size,
-  name,
-  photos,
-  status,
-  tags,
-}) => (
-  <div className="" />
-);
+        </article>
+      </Link>
+    </BrowserRouter>
+  );
+};
 
+// const mapStateToProps = (state) => (
+//   console.log(state)
+// );
+
+// export default connect(mapStateToProps)(Pet);
 export default Pet;
