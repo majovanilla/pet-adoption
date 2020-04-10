@@ -17,11 +17,7 @@ const Pet = ({
   status,
   tags,
 }) => (
-  <div className="">
-    <ImgCarousel />
-    <Description />
-    <Links />
-  </div>
+  <div className="" />
 );
 
 export default Pet;
