@@ -1,29 +1,4 @@
-const initState = [
-  {
-    id: 0,
-    title: 'Fluffy and friendly',
-    name: 'Miguel Angel',
-    type: 'cat',
-    age: 'Young',
-    size: 'small',
-  },
-  {
-    id: 1,
-    title: 'Playful and friendly',
-    name: 'Leonardo',
-    type: 'dog',
-    age: 'Young',
-    size: 'Large',
-  },
-  {
-    id: 2,
-    title: 'Quiet and babysitter',
-    name: 'Donatello',
-    type: 'dog',
-    age: 'Old',
-    size: 'small',
-  },
-];
+import initState from './initState';
 
 const petListReducer = (state = initState, action) => {
   switch (action.type) {
