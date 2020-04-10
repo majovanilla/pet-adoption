@@ -1,14 +1,10 @@
 import React from 'react';
-import SearchBar from './SearchBar';
-import Filter from './Filter';
 import Pet from './Pet';
 
-const List = () => (
+const PetList = () => (
   <main>
-    <SearchBar />
-    <Filter />
     <Pet />
   </main>
 );
 
-export default List;
+export default PetList;

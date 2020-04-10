@@ -1,11 +1,11 @@
 import React from 'react';
-import Pictures from './Pictures';
 import Description from './Description';
 import Links from './Links';
+import ImgCarousel from './ImgCarousel';
 
 const MainPage = () => (
   <div>
-    <Pictures />
+    <ImgCarousel />
     <Description />
     <Links />
   </div>
