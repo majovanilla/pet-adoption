@@ -12,7 +12,9 @@ const initState = [
 const listReducer = (state = initState, action) => {
   switch (action.type) {
     case 'ADD_FAVORITE':
-      return state.concat([action.text]);
+      return state;
+    case 'NEW_SEARCH':
+      return state;
     default:
       return state;
   }
