@@ -20,7 +20,7 @@ const mapStateToProps = (state) => (
 );
 
 PetList.propTypes = {
-  pets: PropTypes.objectOf(PropTypes.object).isRequired,
+  pets: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default connect(mapStateToProps)(PetList);
