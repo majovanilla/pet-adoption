@@ -1,0 +1,26 @@
+.petCard {
+  height: 50vh;
+  align-items: center;
+}
+
+
+.cardTitle {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.imageCard {
+  width: 100%;
+  height: 75%;
+  overflow: hidden;
+}
+
+.image::before {
+  content: ' ';
+  left: 0;
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #121416 url(../images/petImage.png) no-repeat center 10%/ 40% ;
+}
