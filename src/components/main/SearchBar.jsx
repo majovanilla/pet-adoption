@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Filter from './Filter';
 
 const SearchBar = () => (
-  <div className="searchBar container-fluid">
+  <div className="searchBar container-fluid col-lg-9">
     <Filter />
     <Form.Row className="mx-0 my-3 justify-content-between form-row">
       <FormControl type="text" placeholder="My pet is..." className="px-2 mx-0 col-7" />
