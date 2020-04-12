@@ -9,8 +9,8 @@ const NavBar = () => (
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="categories">Categories</Nav.Link>
-          <Nav.Link href="contact">Contact</Nav.Link>
+          <Nav.Link href="/categories">Categories</Nav.Link>
+          <Nav.Link href="/contact">Contact</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

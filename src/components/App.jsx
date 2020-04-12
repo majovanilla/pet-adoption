@@ -14,9 +14,9 @@ const App = () => (
       <Navbar />
       <Switch>
         <Route exact path="/" component={MainPage} />
+        <Route exact path="/details/:id" component={DetailsPage} />
         <Route exact path="/categories" component={Categories} />
         <Route exact path="/contact" component={Contact} />
-        <Route exact path="/:id" component={DetailsPage} />
       </Switch>
     </div>
   </BrowserRouter>
