@@ -16,7 +16,7 @@ const PetList = ({ pets }) => (
 );
 
 const mapStateToProps = (state) => (
-  { pets: state.pets }
+  { pets: state.pets.animals }
 );
 
 PetList.propTypes = {
