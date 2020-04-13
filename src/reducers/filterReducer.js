@@ -1,16 +1,13 @@
-const initState = "ALL";
+const initState = 'All Pets';
 
 const filterReducer = (state = initState, action) => {
-  switch (action.type) {
-    case 'ALL':
-      return state;
-    case 'CATS':
-      return state;
-    case 'DOGS':
-      return state;
-    default:
-      return state;
+  if (action === 'CHANGE_FILTER') {
+    return {
+      ...state,
+      filter: action.filter,
+    };
   }
+  return state;
 };
 
 export default filterReducer;

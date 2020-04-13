@@ -16,8 +16,6 @@ const Description = ({ pet }) => {
     contact,
   } = pet;
 
-  console.log(contact);
-
   return (
     <div className={`${detailsStyles.description} col-6`}>
       <h3>{name}</h3>
