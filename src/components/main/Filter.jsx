@@ -1,15 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { categories } from '../categories';
 
 const Filter = (props) => {
   const { handleFilterChange } = props;
-  const categories = [
-    'All Pets', 'Type', 'Breed', 'Size', 'Gender', 'Age', 'Color',
-  ];
 
   const handleChange = (event) => {
-    const filter = event.target.options[event.target.selectedIndex].value;
-    handleFilterChange(filter);
+    const staticFilter = event.target.options[event.target.selectedIndex].value;
+    handleFilterChange(staticFilter);
   };
 
   return (

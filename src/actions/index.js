@@ -3,7 +3,12 @@ export const newSearch = (params) => ({
   params,
 });
 
-export const changeFilter = (filter) => ({
+export const changeFilter = (staticFilter) => ({
   type: 'CHANGE_FILTER',
-  filter,
+  staticFilter,
+});
+
+export const changeDinamicFilter = (dinamicFilter) => ({
+  type: 'CHANGE_DINAMIC_FILTER',
+  dinamicFilter,
 });
