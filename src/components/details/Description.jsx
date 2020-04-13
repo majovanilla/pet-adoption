@@ -17,7 +17,7 @@ const Description = ({ pet }) => {
   } = pet;
 
   return (
-    <div className={`${detailsStyles.description} col-6`}>
+    <div className={`${detailsStyles.description} col-12 col-lg-6`}>
       <h3>{name}</h3>
       <p>{description}</p>
       <div className="row col-12">
@@ -30,18 +30,18 @@ const Description = ({ pet }) => {
       </div>
       <div className="contactInfo mt-5">
         <h4 className="mb-3">Contact:</h4>
-        <p>
-          <img className={detailsStyles.contactIcon} src="https://img.icons8.com/metro/52/000000/email.png" alt="email icon" />
-          {contact.email}
-        </p>
-        <p>
-          <img className={detailsStyles.contactIcon} src="https://img.icons8.com/android/48/000000/phone.png" alt="phone icon" />
-          {contact.phone}
-        </p>
-        <p>
-          <img className={detailsStyles.contactIcon} src="https://img.icons8.com/metro/52/000000/marker.png" alt="location icon" />
-          {`${contact.address.city} ${contact.address.state}`}
-        </p>
+        <div className="col-12 row align-items-center pb-3">
+          <img className={`${detailsStyles.contactIcon} `} src="https://img.icons8.com/metro/52/000000/email.png" alt="email icon" />
+          <p className="m-0">{contact.email}</p>
+        </div>
+        <div className="col-12 row align-items-center pb-3">
+          <img className={`${detailsStyles.contactIcon}`} src="https://img.icons8.com/android/48/000000/phone.png" alt="phone icon" />
+          <p className="m-0">{contact.phone}</p>
+        </div>
+        <div className="col-12 row align-items-center pb-3">
+          <img className={`${detailsStyles.contactIcon}`} src="https://img.icons8.com/metro/52/000000/marker.png" alt="location icon" />
+          <p className="m-0">{`${contact.address.city}, ${contact.address.state}`}</p>
+        </div>
       </div>
     </div>
   );
