@@ -1,7 +1,5 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
-// import FormControl from 'react-bootstrap/FormControl';
-// import Button from 'react-bootstrap/Button';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { changeFilter, changeDinamicFilter } from '../../actions/index';

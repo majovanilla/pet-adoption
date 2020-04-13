@@ -1,5 +1,5 @@
 const initState = {
-  staticFilter: 'All',
+  staticFilter: 'all',
   dinamicFilter: '',
 };
 

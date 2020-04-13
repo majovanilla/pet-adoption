@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { categories, detailedCategories } from '../categories';
+import { detailedCategories } from '../categories';
 
 const DinamicFilter = (props) => {
   const { handleDinamicFilterChange } = props;
   const { staticFilter } = props;
-  console.log('staticFilter in dinamicFilter: ', staticFilter);
   const detailCat = detailedCategories[staticFilter];
-  console.log('detailed cat: ', detailCat);
+
 
   const handleChange = (event) => {
     if (event.target.name === 'sub-category') {

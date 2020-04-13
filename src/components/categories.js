@@ -1,21 +1,21 @@
 export const categories = [
-  'All', 'Type', 'Size', 'Gender', 'Age',
+  'all', 'type', 'size', 'gender', 'age',
 ];
 
 export const detailedCategories = {
-  All: [
+  all: [
     'all',
   ],
-  Type: [
-    'Cat', 'Dog', 'Rabbit', 'Bird',
+  type: [
+    'all', 'Cat', 'Dog', 'Rabbit', 'Bird',
   ],
-  Size: [
-    'Small', 'Medium', 'Large', 'XLarge',
+  size: [
+    'all', 'Small', 'Medium', 'Large', 'Xlarge',
   ],
-  Gender: [
-    'Female', 'Male',
+  gender: [
+    'all', 'Female', 'Male',
   ],
-  Age: [
-    'baby', 'young', 'adult', 'senior',
+  age: [
+    'all', 'Baby', 'Young', 'Adult', 'Senior',
   ],
 };

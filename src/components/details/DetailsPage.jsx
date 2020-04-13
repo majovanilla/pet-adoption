@@ -9,7 +9,6 @@ const DetailsPage = ({ location }) => {
 
   return (
     <div className="row col-12 m-0 p-0">
-      {/* <Links /> */}
       <div className="col-12 row pb-2 mb-5 px-0 mx-0">
         <ImgCarousel />
         <Description pet={pet} />
