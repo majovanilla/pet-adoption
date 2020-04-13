@@ -7,6 +7,7 @@ import DetailsPage from './details/DetailsPage';
 import MainPage from './main/MainPage';
 import Contact from './main/Contact';
 import Categories from './main/Categories';
+import Description from './details/Description';
 
 const App = () => (
   <BrowserRouter>
@@ -15,6 +16,7 @@ const App = () => (
       <Switch>
         <Route exact path="/" component={MainPage} />
         <Route exact path="/details/:id" component={DetailsPage} />
+        {/* <Route exact path="/details/:id/about" component={Description} /> */}
         <Route exact path="/categories" component={Categories} />
         <Route exact path="/contact" component={Contact} />
       </Switch>

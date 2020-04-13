@@ -14,7 +14,7 @@ const Pet = ({ pet }) => {
         <Card.Img variant="top" src={photos[0].medium} className={mainStyles.image} />
       </div>
       <Card.Body className="col-12 row bg-dark py-0 h-25 align-items-center">
-        <Link to={`/details/:${id}`} className="col-4 px-0 ">
+        <Link to={{ pathname: `/details/${id}`, state: { pet } }} className="col-4 px-0 ">
           <Card.Title className={mainStyles.cardTitle}>{name}</Card.Title>
         </Link>
         <Card.Text className="col-8 m-0 py-1 px-0 text-white card-text d-flex justify-content-between">
