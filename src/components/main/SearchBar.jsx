@@ -1,7 +1,7 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { changeFilter } from '../../actions/index';
@@ -21,7 +21,7 @@ const SearchBar = (props) => {
   );
 };
 
-Filter.propTypes = {
+SearchBar.propTypes = {
   handleFilterChange: PropTypes.func.isRequired,
 };
 
@@ -30,8 +30,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  handleFilterChange: (filter) => {
-    dispatch(changeFilter(filter));
+  handleFilterChange: (state, filter) => {
+    dispatch(changeFilter(state, filter));
   },
 });
 
