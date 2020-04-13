@@ -12,14 +12,11 @@ const SearchBar = (props) => {
   const {
     handleFilterChange, handleDinamicFilterChange, staticFilter,
   } = props;
-  console.log('filter in Searchbar:', staticFilter);
   return (
     <div className="searchBar container-fluid col-lg-9">
       <Form.Row className="mx-0 my-3 justify-content-between">
-        {/* <FormControl type="text" placeholder="First select a filter and then search a pet..." className="px-2 mx-0 col-8" /> */}
-        {/* <Button variant="outline-info" className="mx-0 col-4">Find my pet</Button> */}
         <Filter handleFilterChange={handleFilterChange} />
-        {/* <DinamicFilter staticFilter={staticFilter} handleDinamicFilterChange={handleDinamicFilterChange} /> */}
+        <DinamicFilter staticFilter={staticFilter} handleDinamicFilterChange={handleDinamicFilterChange} />
       </Form.Row>
     </div>
   );
@@ -41,8 +38,7 @@ const mapDispatchToProps = (dispatch) => ({
     dispatch(changeFilter(state, staticFilter));
   },
   handleDinamicFilterChange: (state, dinamicFilter) => {
-    // dispatch(changeDinamicFilter(state, dinamicFilter));
-    console.log(dinamicFilter);
+    dispatch(changeDinamicFilter(state, dinamicFilter));
   },
 });
 
