@@ -2,8 +2,11 @@ import initState from './initState';
 
 const petListReducer = (state = initState, action) => {
   switch (action.type) {
-    case 'NEW_SEARCH':
-      return state;
+    case 'RECEIVE_PETS':
+      return {
+        ...state,
+        pets: action.json,
+      };
     default:
       return state;
   }
