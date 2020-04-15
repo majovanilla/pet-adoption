@@ -11,8 +11,8 @@ const SearchBar = (props) => {
     handleFilterChange, handleDinamicFilterChange, staticFilter,
   } = props;
   return (
-    <div className="searchBar container-fluid col-lg-9">
-      <Form.Row className="mx-0 my-3 justify-content-between">
+    <div className="searchBar m-auto col-lg-9">
+      <Form.Row className="mx-0 my-3 px-3 justify-content-between">
         <Filter handleFilterChange={handleFilterChange} />
         <DinamicFilter staticFilter={staticFilter} handleDinamicFilterChange={handleDinamicFilterChange} />
       </Form.Row>
