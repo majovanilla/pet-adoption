@@ -30,6 +30,15 @@
   background: #121416 url(../images/petImage.png) no-repeat center 35%/ 40% ;
 }
 
+.searchBar {
+  display: flex;
+  flex-direction: column;
+}
+
+.selector {
+  
+}
+
 @media only screen and (min-width: 600px) {
   .imageCard {
     height: 85%;
