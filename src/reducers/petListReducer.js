@@ -5,7 +5,7 @@ const petListReducer = (state = initState, action) => {
     case 'RECEIVE_PETS':
       return {
         ...state,
-        pets: action.json,
+        animals: action.animals,
       };
     default:
       return state;

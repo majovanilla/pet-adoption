@@ -1,30 +1,39 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { Spinner } from 'react-bootstrap';
 import Pet from './Pet';
 import { receivePets } from '../../actions';
+import getToken from '../../helpers/getToken';
+import saveAPI from '../../helpers/saveAPI';
 
 
 class PetList extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
-  }
-
-  componentDidMount() {
-    const fetchPets = () => (dispatch) => {
-      fetch(`https://api.petfinder.com/v2/animals/${process.env.REACT_APP_PET_API_KEY}/${process.env.REACT_APP_PET_API_SECRET}`)
-        .then((response) => response.json())
-        .then((json) => console.log('api json: ', json))
-        .then((json) => dispatch(receivePets(json)));
+    this.state = {
+      loading: true,
     };
   }
 
+  componentDidMount() {
+    const { handleJson } = this.props;
+    getToken().then((token) => {
+      saveAPI(token)
+      // .then((response) => response.json())
+        .then((json) => { handleJson(json); })
+        .then((json) => console.log('response', (json)))
+        .then(this.state.loading = false);
+    });
+  }
+
+
   render() {
+    const { loading } = this.state;
     const filterPets = () => {
-      const { pets, staticFilter, dinamicFilter } = this.props;
-      if (staticFilter === 'all' || dinamicFilter === 'all') return (pets);
-      return pets.filter((pet) => pet[staticFilter] === dinamicFilter);
+      const { animals, staticFilter, dinamicFilter } = this.props;
+      if (staticFilter === 'all' || dinamicFilter === 'all') return (animals);
+      return animals.filter((pet) => pet[staticFilter] === dinamicFilter);
     };
 
     return (
@@ -32,7 +41,12 @@ class PetList extends React.Component {
         <ul className="col-12 row justify-content-center">
           { filterPets().map((pet) => (
             <li className="col-12 col-md-6 col-lg-3 m-lg-3" key={pet.id}>
-              <Pet pet={pet} />
+              {loading ? (
+                <Spinner animation="border" role="status">
+                  <span className="sr-only">Loading...</span>
+                </Spinner>
+              )
+                : <Pet pet={pet} />}
             </li>
           ))}
         </ul>
@@ -43,22 +57,24 @@ class PetList extends React.Component {
 
 const mapStateToProps = (state) => (
   {
-    pets: state.pets.pets,
+    animals: state.animals.animals,
     staticFilter: state.filter.staticFilter,
     dinamicFilter: state.filter.dinamicFilter,
   }
 );
 
-// function mapDispatchToProps(dispatch) {
-//   return {
-//     pets: bindActionCreators(receivePets, dispatch),
-//   };
-// }
+const mapDispatchToProps = (dispatch) => ({
+  handleJson: (json) => {
+    dispatch(receivePets(json));
+  },
+});
+
 
 PetList.propTypes = {
-  pets: PropTypes.arrayOf(PropTypes.object).isRequired,
+  animals: PropTypes.arrayOf(PropTypes.object).isRequired,
   staticFilter: PropTypes.string.isRequired,
   dinamicFilter: PropTypes.string.isRequired,
+  handleJson: PropTypes.func.isRequired,
 };
 
-export default connect(mapStateToProps)(PetList);
+export default connect(mapStateToProps, mapDispatchToProps)(PetList);

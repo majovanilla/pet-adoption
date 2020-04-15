@@ -1,5 +1,10 @@
 .carouselImage {
   height: 50%;
+  object-fit: cover;
+}
+
+.carouselItem {
+  max-height: 90vh;
 }
 
 .carouselText {

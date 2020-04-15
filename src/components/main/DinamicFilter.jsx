@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { detailedCategories } from '../categories';
+import { detailedCategories } from '../../helpers/categories';
 
 const DinamicFilter = (props) => {
   const { handleDinamicFilterChange } = props;

@@ -8,10 +8,15 @@ const Pet = ({ pet }) => {
   const {
     id, age, gender, name, photos, status, tags,
   } = pet;
+
+  let photo;
+  if (photos.length === 0) photo = <Card.Img variant="top" src="../../images/petImage.png" className={mainStyles.image} />;
+  if (photos.length) photo = <Card.Img variant="top" src={photos[0].medium} className={mainStyles.image} />;
+
   return (
     <Card className={mainStyles.petCard}>
       <div className={mainStyles.imageCard}>
-        <Card.Img variant="top" src={photos[0].medium} className={mainStyles.image} />
+        {photo}
       </div>
       <Card.Body className="col-12 row bg-dark py-0 h-25 align-items-center">
         <Link to={{ pathname: `/details/${id}`, state: { pet } }} className="col-4 px-0 ">

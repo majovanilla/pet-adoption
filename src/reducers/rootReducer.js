@@ -3,7 +3,7 @@ import petListReducer from './petListReducer';
 import filterReducer from './filterReducer';
 
 const rootReducer = (combineReducers({
-  pets: petListReducer,
+  animals: petListReducer,
   filter: filterReducer,
 }));
 

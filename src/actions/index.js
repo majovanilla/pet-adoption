@@ -9,7 +9,7 @@
 
 export const receivePets = (json) => ({
   type: 'RECEIVE_PETS',
-  pets: json,
+  animals: json.animals,
 });
 
 export const changeFilter = (staticFilter) => ({

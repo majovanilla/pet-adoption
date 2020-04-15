@@ -1,5 +1,5 @@
 const initState = {
-  pets:
+  animals:
     [
       {
         id: 120,
