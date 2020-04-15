@@ -13,23 +13,30 @@ const Pet = ({ pet }) => {
   if (photos.length === 0) photo = <Card.Img variant="top" src="../../images/petImage.png" className={mainStyles.image} />;
   if (photos.length) photo = <Card.Img variant="top" src={photos[0].medium} className={mainStyles.image} />;
 
+  let tagDiv;
+  if (tags.length) {
+    tagDiv = (
+      <div className="col-12 px-1 pb-1 d-flex justify-content-between">
+        { tags.map((tag, i) => (<Badge variant="secondary" className="mr-1 my-1" key={`${id}${i * 10}`}>{tag}</Badge>))}
+      </div>
+    );
+  }
+
   return (
     <Card className={mainStyles.petCard}>
       <div className={mainStyles.imageCard}>
         {photo}
       </div>
-      <Card.Body className="col-12 row bg-dark py-0 h-25 align-items-center">
-        <Link to={{ pathname: `/details/${id}`, state: { pet } }} className="col-12 col-lg-4 px-0 text-center pt-2">
+      <Card.Body className="col-12 row bg-dark py-0 align-items-center justify-content-between">
+        <Link to={{ pathname: `/details/${id}`, state: { pet } }} className="col-12 col-md-4 px-0 text-center pt-2 pt-md-0">
           <Card.Title className={mainStyles.cardTitle}>{name}</Card.Title>
         </Link>
-        <Card.Text className="col-12 col-lg-8 m-0 py-1 px-0 text-white d-flex justify-content-between">
+        <Card.Text className="col-12 col-md-7 m-0 py-1 px-0 text-white d-flex justify-content-between">
           <span className="pr-2">{age}</span>
           <span className="pr-2">{gender}</span>
           <span className=" ">{status}</span>
         </Card.Text>
-        <div className="col-12 px-1 pb-1 d-flex justify-content-between">
-          { tags.map((tag, i) => (<Badge variant="secondary" className="mr-1 my-1" key={`${id}${i * 10}`}>{tag}</Badge>))}
-        </div>
+        {tagDiv}
       </Card.Body>
     </Card>
   );

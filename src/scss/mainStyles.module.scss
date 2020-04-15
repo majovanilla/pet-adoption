@@ -24,3 +24,9 @@
   width: 100%;
   background: #121416 url(../images/petImage.png) no-repeat center 10%/ 40% ;
 }
+
+@media only screen and (min-width: 600px) {
+  .imageCard {
+    height: 85%;
+  }
+}
