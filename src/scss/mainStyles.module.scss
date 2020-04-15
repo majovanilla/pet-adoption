@@ -15,6 +15,11 @@
   overflow: hidden;
 }
 
+.image {
+  object-fit: cover;
+  height: 100%;
+}
+
 .image::before {
   content: ' ';
   left: 0;
@@ -22,7 +27,7 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  background: #121416 url(../images/petImage.png) no-repeat center 10%/ 40% ;
+  background: #121416 url(../images/petImage.png) no-repeat center 35%/ 40% ;
 }
 
 @media only screen and (min-width: 600px) {

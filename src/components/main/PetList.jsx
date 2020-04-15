@@ -22,11 +22,9 @@ class PetList extends React.Component {
       saveAPI(token)
       // .then((response) => response.json())
         .then((json) => { handleJson(json); })
-        .then((json) => console.log('response', (json)))
         .then(this.state.loading = false);
     });
   }
-
 
   render() {
     const { loading } = this.state;
@@ -50,6 +48,9 @@ class PetList extends React.Component {
             </li>
           ))}
         </ul>
+        <div className="pagination">
+          {Pagination}
+        </div>
       </main>
     );
   }
