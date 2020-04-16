@@ -18,8 +18,8 @@ const getToken = () => {
       'Content-Type': 'application/x-www-form-urlencoded',
     },
   })
-    .then((response) => response.json())
-    .then((json) => {
+    .then(response => response.json())
+    .then(json => {
       cachedToken = {
         token: json.access_token,
         expiresAt: NOW + json.expires_in,

@@ -1,4 +1,4 @@
-const saveAPI = (token) => {
+const saveAPI = token => {
   const NOW = Math.round((new Date()).getTime() / 1000);
   let cachedAnimals = JSON.parse(localStorage.getItem('animalsCall'));
   if (cachedAnimals && cachedAnimals.savedAt > 86400) {
@@ -16,8 +16,8 @@ const saveAPI = (token) => {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
     })
-    .then((response) => response.json())
-    .then((json) => {
+    .then(response => response.json())
+    .then(json => {
       cachedAnimals = {
         animals: json.animals,
         savedAt: NOW,
