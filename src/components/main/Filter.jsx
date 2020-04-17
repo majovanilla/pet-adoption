@@ -5,13 +5,8 @@ import { categories } from '../../helpers/categories';
 import mainStyles from '../../scss/mainStyles.module.scss';
 
 
-const Filter = (props) => {
-  const { handleFilterChange } = props;
-
-  const handleChange = (event) => {
-    const staticFilter = event.target.options[event.target.selectedIndex].value;
-    handleFilterChange(staticFilter);
-  };
+const Filter = props => {
+  const { handleChange } = props;
 
   return (
     <Form.Control as="select" size="lg" custom name="category" className={`${mainStyles.selector} col-4 mb-3`} onChange={handleChange}>
@@ -31,7 +26,7 @@ const Filter = (props) => {
 };
 
 Filter.propTypes = {
-  handleFilterChange: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired,
 };
 
 export default Filter;

@@ -4,18 +4,9 @@ import { Form } from 'react-bootstrap';
 import { detailedCategories } from '../../helpers/categories';
 import mainStyles from '../../scss/mainStyles.module.scss';
 
-const DinamicFilter = (props) => {
-  const { handleFilterChange } = props;
-  const { staticFilter } = props;
+const DinamicFilter = props => {
+  const { handleChange, staticFilter } = props;
   const detailCat = detailedCategories[staticFilter];
-
-
-  const handleChange = (event) => {
-    if (event.target.name === 'sub-category') {
-      const dinamicFilter = event.target.options[event.target.selectedIndex].value;
-      handleFilterChange(dinamicFilter);
-    }
-  };
 
   return (
     <Form.Control as="select" size="lg" custom name="sub-category" className={`${mainStyles.selector} col-4 mb-3`} onChange={handleChange}>
@@ -28,12 +19,13 @@ const DinamicFilter = (props) => {
           </option>
         );
       })}
+      {console.log(detailCat)}
     </Form.Control>
   );
 };
 
 DinamicFilter.propTypes = {
-  handleFilterChange: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired,
   staticFilter: PropTypes.string.isRequired,
 };
 
