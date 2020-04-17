@@ -3,10 +3,10 @@ import Carousel from 'react-bootstrap/Carousel';
 import PropTypes from 'prop-types';
 import detailsStyles from '../../scss/detailsStyles.module.scss';
 
-const ImgCarousel = ({ photos }) => (
+const ImgCarousel = ({ photos, id }) => (
   <Carousel className="col-12 col-lg-6 p-0">
-    {photos.map((photo) => (
-      <Carousel.Item className={detailsStyles.carouselItem}>
+    {photos.map((photo, i) => (
+      <Carousel.Item className={detailsStyles.carouselItem} key={`${id}-${i * 1000}`}>
         <img
           className={`d-block w-100 ${detailsStyles.carouselImage}`}
           src={photo.medium}
@@ -18,7 +18,8 @@ const ImgCarousel = ({ photos }) => (
 );
 
 ImgCarousel.propTypes = {
-  photos: PropTypes.arrayOf(PropTypes.string).isRequired,
+  photos: PropTypes.arrayOf(PropTypes.object).isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 export default ImgCarousel;

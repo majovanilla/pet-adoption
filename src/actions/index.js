@@ -1,12 +1,3 @@
-// export const fetchPetsPending = () => ({
-//   type: 'FETCH_PRODUCTS_PENDING',
-// });
-
-// export const fetchPetsError = (error) => ({
-//   type: 'FETCH_PRODUCTS_ERROR',
-//   error,
-// });
-
 export const receivePets = json => ({
   type: 'RECEIVE_PETS',
   animals: json.animals,
