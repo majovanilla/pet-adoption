@@ -20,7 +20,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Live Demo
 
-[Live Demo Link](https://hidden-bayou-72074.herokuapp.com/ )
+[Live Demo Link](https://pet-finder-react.netlify.app/)
 
 
 ## Getting Started
