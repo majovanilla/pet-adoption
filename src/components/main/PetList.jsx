@@ -18,10 +18,10 @@ class PetList extends React.Component {
 
   componentDidMount() {
     const { handleJson } = this.props;
-    getToken().then((token) => {
+    getToken().then(token => {
       saveAPI(token)
-        .then((json) => { handleJson(json); })
-        .then(this.state.loading = false);
+        .then(json => handleJson(json))
+        .then(this.setState(() => ({ loading: false })));
     });
   }
 
@@ -30,13 +30,13 @@ class PetList extends React.Component {
     const filterPets = () => {
       const { animals, staticFilter, dinamicFilter } = this.props;
       if (staticFilter === 'all' || dinamicFilter === 'all') return (animals);
-      return animals.filter((pet) => pet[staticFilter] === dinamicFilter);
+      return animals.filter(pet => pet[staticFilter] === dinamicFilter);
     };
 
     return (
       <main className="m-0 px-0">
         <ul className="col-12 m-0 p-0 row justify-content-center">
-          { filterPets().map((pet) => (
+          { filterPets().map(pet => (
             <li className="col-12 col-md-6 col-lg-3 m-lg-3 mt-3 p-0" key={pet.id}>
               {loading ? (
                 <Spinner animation="border" role="status">
@@ -52,7 +52,7 @@ class PetList extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => (
+const mapStateToProps = state => (
   {
     animals: state.animals.animals,
     staticFilter: state.filter.staticFilter,
@@ -60,8 +60,8 @@ const mapStateToProps = (state) => (
   }
 );
 
-const mapDispatchToProps = (dispatch) => ({
-  handleJson: (json) => {
+const mapDispatchToProps = dispatch => ({
+  handleJson: json => {
     dispatch(receivePets(json));
   },
 });
