@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import tempMenus from '../../scss/tempMenus.module.scss';
 
 const Catch404 = props => {
   const { history } = props;
@@ -11,9 +12,11 @@ const Catch404 = props => {
   };
 
   return (
-    <div className="Catch404">
-      <h3>There is nothing here</h3>
-      <p>404 </p>
+    <div className={tempMenus.tempMenu}>
+      <h2>There is nothing here</h2>
+      <br />
+      <p className={tempMenus.text}>You will be redirected back in 1.5 seconds</p>
+      <p>error: 404 Not Found</p>
       {redirect()}
     </div>
   );

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { changeFilter, changeDinamicFilter } from '../actions/index';
 import Filter from '../components/main/filter/Filter';
 import DinamicFilter from '../components/main/filter/DinamicFilter';
-import mainStyles from '../scss/mainStyles.module.scss';
+import searchBar from '../scss/searchBar.module.scss';
 
 const SearchBar = props => {
   const {
@@ -23,7 +23,7 @@ const SearchBar = props => {
   };
 
   return (
-    <div className={`${mainStyles.searchBar} mx-auto col-lg-9 my-3`}>
+    <div className={`${searchBar.searchBar} mx-auto col-lg-9 my-3`}>
       <h2 className="mb-3">Search Parameters</h2>
       <Filter handleChange={handleChange} />
       <DinamicFilter staticFilter={staticFilter} handleChange={handleChange} />
