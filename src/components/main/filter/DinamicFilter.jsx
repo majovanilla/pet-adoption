@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Form } from 'react-bootstrap';
-import { detailedCategories } from '../../helpers/categories';
-import mainStyles from '../../scss/mainStyles.module.scss';
+import { detailedCategories } from '../../../helpers/categories';
+import mainStyles from '../../../scss/mainStyles.module.scss';
 
 const DinamicFilter = props => {
   const { handleChange, staticFilter } = props;
@@ -19,7 +19,6 @@ const DinamicFilter = props => {
           </option>
         );
       })}
-      {console.log(detailCat)}
     </Form.Control>
   );
 };

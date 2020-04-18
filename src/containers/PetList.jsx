@@ -2,10 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Spinner } from 'react-bootstrap';
-import Pet from './Pet';
-import { receivePets } from '../../actions';
-import getToken from '../../helpers/getToken';
-import saveAPI from '../../helpers/saveAPI';
+import Pet from '../components/main/Pet';
+import { receivePets } from '../actions';
+import getToken from '../helpers/getToken';
+import saveAPI from '../helpers/saveAPI';
 
 
 class PetList extends React.Component {

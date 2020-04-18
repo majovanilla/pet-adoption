@@ -5,8 +5,9 @@ import {
 import Navbar from './Navbar';
 import DetailsPage from './details/DetailsPage';
 import MainPage from './main/MainPage';
-import Contact from './main/Contact';
-import Categories from './main/Categories';
+import Contact from './menu/Contact';
+import Categories from './menu/Categories';
+import Catch404 from './menu/Catch404';
 
 const App = () => (
   <BrowserRouter>
@@ -17,6 +18,7 @@ const App = () => (
         <Route exact path="/details/:id" component={DetailsPage} />
         <Route exact path="/categories" component={Categories} />
         <Route exact path="/contact" component={Contact} />
+        <Route component={Catch404} />
       </Switch>
     </div>
   </BrowserRouter>

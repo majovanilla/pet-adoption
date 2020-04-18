@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, Badge } from 'react-bootstrap';
 import PropTypes from 'prop-types';
-import mainStyles from '../../scss/mainStyles.module.scss';
+import petStyles from '../../scss/petStyles.module.scss';
 
 const Pet = ({ pet }) => {
   const {
@@ -10,8 +10,8 @@ const Pet = ({ pet }) => {
   } = pet;
 
   let photo;
-  if (photos.length === 0) photo = <Card.Img variant="top" src="../../images/petImage.png" className={mainStyles.image} />;
-  if (photos.length) photo = <Card.Img variant="top" src={photos[0].medium} className={mainStyles.image} />;
+  if (photos.length === 0) photo = <Card.Img variant="top" src="../../images/petImage.png" className={petStyles.image} />;
+  if (photos.length) photo = <Card.Img variant="top" src={photos[0].medium} className={petStyles.image} />;
 
   let tagDiv;
   if (tags.length) {
@@ -23,13 +23,13 @@ const Pet = ({ pet }) => {
   }
 
   return (
-    <Card className={mainStyles.petCard}>
-      <div className={mainStyles.imageCard}>
+    <Card className={petStyles.petCard}>
+      <div className={petStyles.imageCard}>
         {photo}
       </div>
       <Card.Body className="col-12 row bg-dark py-0 align-items-center justify-content-between">
         <Link to={{ pathname: `/details/${id}`, state: { pet } }} className="col-12 col-md-4 px-0 text-center pt-2 pt-md-0">
-          <Card.Title className={mainStyles.cardTitle}>{name}</Card.Title>
+          <Card.Title className={petStyles.cardTitle}>{name}</Card.Title>
         </Link>
         <Card.Text className="col-12 col-md-7 m-0 py-1 px-0 text-white d-flex justify-content-between">
           <span className="pr-2">{age}</span>

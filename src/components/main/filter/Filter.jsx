@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Form } from 'react-bootstrap';
-import { categories } from '../../helpers/categories';
-import mainStyles from '../../scss/mainStyles.module.scss';
+import { categories } from '../../../helpers/categories';
+import mainStyles from '../../../scss/mainStyles.module.scss';
 
 
 const Filter = props => {

@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { changeFilter, changeDinamicFilter } from '../../actions/index';
-import Filter from './Filter';
-import DinamicFilter from './DinamicFilter';
-import mainStyles from '../../scss/mainStyles.module.scss';
+import { changeFilter, changeDinamicFilter } from '../actions/index';
+import Filter from '../components/main/filter/Filter';
+import DinamicFilter from '../components/main/filter/DinamicFilter';
+import mainStyles from '../scss/mainStyles.module.scss';
 
 const SearchBar = props => {
   const {
