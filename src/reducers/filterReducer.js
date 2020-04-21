@@ -1,9 +1,6 @@
-const initState = {
-  staticFilter: 'all',
-  dinamicFilter: '',
-};
+import { initFilterState } from './initState';
 
-const filterReducer = (state = initState, action) => {
+const filterReducer = (state = initFilterState, action) => {
   if (action.type === 'CHANGE_FILTER') {
     return {
       ...state,

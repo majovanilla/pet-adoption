@@ -1,6 +1,6 @@
-import initState from './initState';
+import { initPetState } from './initState';
 
-const petListReducer = (state = initState, action) => {
+const petListReducer = (state = initPetState, action) => {
   switch (action.type) {
     case 'RECEIVE_PETS':
       return {
