@@ -8,7 +8,7 @@ import getToken from '../helpers/getToken';
 import saveAPI from '../helpers/saveAPI';
 
 
-class PetList extends React.Component {
+export class PetList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -27,6 +27,7 @@ class PetList extends React.Component {
 
   render() {
     const { loading } = this.state;
+
     const filterPets = () => {
       const { animals, staticFilter, dinamicFilter } = this.props;
       if (staticFilter === 'all' || dinamicFilter === 'all') return (animals);
