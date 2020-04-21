@@ -1,37 +1,45 @@
-import React from "react";
-import { render, unmountComponentAtNode } from "react-dom";
-import { act } from "react-dom/test-utils";
-import { PetList } from '../containers/PetList';
-import { shallow } from 'enzyme';
+// import React from "react";
+// import { render, unmountComponentAtNode } from "react-dom";
+// import { act } from "react-dom/test-utils";
+// import { PetList } from '../containers/PetList';
+// import Enzyme, { shallow } from 'enzyme'
 
-let container = null;
+// function setup() {
+//   const props = {
+//     handleJson: jest.fn()
+//   }
 
-describe('PetList Component', () => {
-  let wrapper;
-  const mockLoginfn = jest.fn();
+//   const wrapper = shallow(<PetList {...props} />)
 
-  beforeEach(() => {
-    container = document.createElement("div");
-    document.body.appendChild(container);
-    wrapper = shallow(<PetList handleJson={mockLoginfn} />)
-  });
+//   return {
+//     props,
+//     wrapper
+//   }
+// }
 
-  afterEach(() => {
-    unmountComponentAtNode(container);
-    container.remove();
-    container = null;
-  });
+// let container = null;
 
-  it('should call the api once before rendering', () => {
-    expect(mockLoginfn.mock.calls.length).toBe(1)
-  })
+// describe('PetList Component', () => {
+//   const { wrapper } = setup();
 
-  it('renderst the PetList component', () => {
+//   beforeEach(() => {
+//     container = document.createElement("div");
+//     document.body.appendChild(container);
+//   });
 
-    expect(container.querySelector("summary").textContent).toBe(fakeUser.name);
-  })
+//   afterEach(() => {
+//     unmountComponentAtNode(container);
+//     container.remove();
+//     container = null;
+//   });
 
+//   it('should call the api once before rendering', () => {
+//     expect(mockLoginfn.mock.calls.length).toBe(1)
+//   })
 
-  // remove the mock to ensure tests are completely isolated
-  global.fetch.mockRestore;
-});
+//   // it('renders the PetList component', () => {
+//   //   expect(container.querySelector("summary").textContent).toBe(fakeUser.name);
+//   // })
+
+//   global.fetch.mockRestore;
+// });
