@@ -1,35 +1,22 @@
-// import '@testing-library/jest-dom'
-// import React from 'react'
-// import { screen, render } from '@testing-library/react'
-// import Navbar from '../components/App';
-// // import { render } from 'enzyme';
-// import { unmountComponentAtNode } from "react-dom";
+import '@testing-library/jest-dom';
+import React from 'react';
+import Enzyme, { shallow } from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
+import Navbar from '../components/App';
+
+Enzyme.configure({ adapter: new Adapter() })
 
 
-// describe('main page renders correctly', () => {
-//   let container = null;
-//   beforeEach(() => {
-//     // setup a DOM element as a render target
-//     container = document.createElement("div");
-//     document.body.appendChi/*  */ld(container);
-//   });
+describe('main page renders correctly', () => {
+  const enzymeWrapper = shallow(<Navbar />)
 
-//   afterEach(() => {
-//     // cleanup on exiting
-//     unmountComponentAtNode(container);
-//     container.remove();
-//     container = null;
-//   });
+  it('has an h2 with the app title', () => {
+    expect(enzymeWrapper.find('h2').text()).toBe('Pet Finder')
+  });
 
-
-//   it('has an h2 with the app title', () => {
-//     render(<Navbar />)
-//     expect(screen.getByText('Pet Finder')).toBeInTheDocument;
-//   });
-
-//   // it('has two filters', () => {
-//   //   render(<Filter />)
-//   //   render(<DinamicFilter />)
-//   //   expect(screen.getAllByText('custom-select')).toHaveLength(2);
-//   // });
-// })
+  // it('has two filters', () => {
+  //   render(<Filter />)
+  //   render(<DinamicFilter />)
+  //   expect(screen.getAllByText('custom-select')).toHaveLength(2);
+  // });
+})

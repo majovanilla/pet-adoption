@@ -4,11 +4,15 @@
     "setupFilesAfterEnv": [
       "./src/setupTests.js"
     ],
-    "verbose": true,
-    "unmockedModulePathPatterns": [
-      "node_modules/react/",
-      "node_modules/enzyme/"
-    ]
+    "transform": {
+      "\\.(js|jsx)$": [
+        "babel-jest"
+      ]
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
+    ],
+    "verbose": true
   },
   "version": "0.1.0",
   "private": true,
