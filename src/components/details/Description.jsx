@@ -30,15 +30,15 @@ const Description = ({ pet }) => {
       </div>
       <div className="contactInfo mt-5">
         <h4 className="mb-3">Contact:</h4>
-        <div className="col-12 row align-items-center pb-3 px-0 m-0">
+        <div className="emailDiv col-12 row align-items-center pb-3 px-0 m-0">
           <img className={`${detailsStyles.contactIcon} `} src="https://img.icons8.com/metro/52/000000/email.png" alt="email icon" />
           <p className="m-0">{contact.email}</p>
         </div>
-        <div className="col-12 row align-items-center pb-3 px-0 m-0">
+        <div className="phoneDiv col-12 row align-items-center pb-3 px-0 m-0">
           <img className={`${detailsStyles.contactIcon}`} src="https://img.icons8.com/android/48/000000/phone.png" alt="phone icon" />
           <p className="m-0">{contact.phone}</p>
         </div>
-        <div className="col-12 row align-items-center pb-3 px-0 m-0">
+        <div className="addressDiv col-12 row align-items-center pb-3 px-0 m-0">
           <img className={`${detailsStyles.contactIcon}`} src="https://img.icons8.com/metro/52/000000/marker.png" alt="location icon" />
           <p className="m-0">{`${contact.address.city}, ${contact.address.state}`}</p>
         </div>
