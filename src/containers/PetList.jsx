@@ -35,10 +35,10 @@ export class PetList extends React.Component {
     };
 
     return (
-      <main className="m-0 px-0">
-        <ul className="col-12 m-0 p-0 row justify-content-center">
+      <main className="mx-auto px-0">
+        <ul className="mx-auto p-0 row justify-content-center">
           { filterPets().map(pet => (
-            <li className="col-12 col-md-6 col-lg-3 m-lg-3 mt-3 p-0" key={pet.id}>
+            <li className="col-12 col-md-6 col-lg-4 mt-3" key={pet.id}>
               {loading ? (
                 <Spinner animation="border" role="status">
                   <span className="sr-only">Loading...</span>

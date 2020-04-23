@@ -8,7 +8,7 @@ const DinamicFilter = props => {
   const detailCat = detailedCategories[staticFilter];
 
   return (
-    <Form.Control as="select" size="lg" custom name="sub-category" className="col-4 mb-3" onChange={handleChange}>
+    <Form.Control as="select" size="lg" custom name="sub-category" className="mb-3" onChange={handleChange}>
       { detailCat.map((category, index) => {
         const categoryKey = `CATEGORY_${index}`;
 
