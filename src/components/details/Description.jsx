@@ -49,7 +49,17 @@ const Description = ({ pet }) => {
 
 
 Description.propTypes = {
-  pet: PropTypes.objectOf(PropTypes.object).isRequired,
+  pet: PropTypes.shape({
+    type: PropTypes.string.isRequired,
+    age: PropTypes.string.isRequired,
+    gender: PropTypes.string.isRequired,
+    size: PropTypes.string.isRequired,
+    coat: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    status: PropTypes.string.isRequired,
+    contact: PropTypes.object.isRequired,
+  }).isRequired,
 };
 
 export default Description;

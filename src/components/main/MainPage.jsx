@@ -1,3 +1,4 @@
+/* eslint-disable import/no-named-as-default */
 import React from 'react';
 import SearchBar from '../../containers/SearchBar';
 import PetList from '../../containers/PetList';

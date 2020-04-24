@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Description from './Description';
 import ImgCarousel from './ImgCarousel';
-import SocialDetails from './SocialDetails';
 
 const DetailsPage = ({ location }) => {
   const { pet } = location.state;
@@ -14,7 +13,6 @@ const DetailsPage = ({ location }) => {
         <ImgCarousel photos={photos} id={id} />
         <Description pet={pet} />
       </div>
-      <SocialDetails />
     </div>
   );
 };
@@ -23,7 +21,7 @@ DetailsPage.propTypes = {
   location: PropTypes.shape({
     state: PropTypes.shape({
       pet: PropTypes.shape({
-        photos: PropTypes.arrayOf(PropTypes.string).isRequired,
+        photos: PropTypes.arrayOf(PropTypes.object).isRequired,
         id: PropTypes.number.isRequired,
       }),
     }),
