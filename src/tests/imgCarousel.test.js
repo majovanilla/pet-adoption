@@ -31,9 +31,7 @@ describe('Carousel component', () => {
     expect(wrapper.exists()).toBe(true);
   })
 
-  it('should render the images', () => {
-    const carousel = shallow(<Carousel.Item />)
-    // expect(wrapper.find('.carousel-item').children()).toHaveLength(props.photos.length);
-    expect(wrapper.find(carousel)).toBe(true);
+  it('should render the carousel', () => {
+    expect(wrapper.find(Carousel.Item).exists()).toBe(true);
   })
 });

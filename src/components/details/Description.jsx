@@ -54,7 +54,7 @@ Description.propTypes = {
     age: PropTypes.string.isRequired,
     gender: PropTypes.string.isRequired,
     size: PropTypes.string.isRequired,
-    coat: PropTypes.string.isRequired,
+    coat: PropTypes.string,
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     status: PropTypes.string.isRequired,
