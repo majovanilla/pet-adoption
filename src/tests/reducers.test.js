@@ -1,7 +1,7 @@
 import petListReducer from '../reducers/petListReducer';
 import filterReducer from '../reducers/filterReducer';
-import { initPetState } from '../reducers/initState';
-import { initFilterState } from '../reducers/initState';
+import { initPetState, initFilterState } from '../reducers/initState';
+
 
 describe('petList reducer', () => {
   it('should return the init state', () => {
@@ -9,8 +9,8 @@ describe('petList reducer', () => {
   });
 
   it('should process a pet list json', () => {
-    expect(petListReducer)
-  })
+    expect(petListReducer);
+  });
 });
 
 describe('filter reducer', () => {
@@ -21,23 +21,23 @@ describe('filter reducer', () => {
   it('should handle static filter change', () => {
     expect(filterReducer(initFilterState, {
       type: 'CHANGE_FILTER',
-      staticFilter: 'type'
+      staticFilter: 'type',
     })).toEqual({
       staticFilter: 'type',
       dinamicFilter: '',
-    })
-  })
+    });
+  });
 
   it('should handle dinamic filter change', () => {
     expect(filterReducer({
       staticFilter: 'type',
-      dinamicFilter: ''
+      dinamicFilter: '',
     }, {
       type: 'CHANGE_DINAMIC_FILTER',
-      dinamicFilter: 'Cat'
+      dinamicFilter: 'Cat',
     })).toEqual({
       staticFilter: 'type',
       dinamicFilter: 'Cat',
-    })
-  })
+    });
+  });
 });

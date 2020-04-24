@@ -1,27 +1,28 @@
-import React from "react";
-import ImgCarousel from '../components/details/ImgCarousel';
+/* eslint-disable react/jsx-props-no-spreading */
+import React from 'react';
 import { shallow } from 'enzyme';
 import Carousel from 'react-bootstrap/Carousel';
+import ImgCarousel from '../components/details/ImgCarousel';
 
 function setup() {
   const props = {
     photos: [
       {
-        small: "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/47842140/1/?bust=1587391960&width=100",
-        medium: "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/47842140/1/?bust=1587391960&width=300",
-        large: "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/47842140/1/?bust=1587391960&width=600",
-        full: "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/47842140/1/?bust=1587391960",
-      }
+        small: 'https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/47842140/1/?bust=1587391960&width=100',
+        medium: 'https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/47842140/1/?bust=1587391960&width=300',
+        large: 'https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/47842140/1/?bust=1587391960&width=600',
+        full: 'https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/47842140/1/?bust=1587391960',
+      },
     ],
     id: 64651,
-  }
+  };
 
-  const wrapper = shallow(<ImgCarousel {...props} />)
+  const wrapper = shallow(<ImgCarousel {...props} />);
 
   return {
     props,
-    wrapper
-  }
+    wrapper,
+  };
 }
 
 describe('Carousel component', () => {
@@ -29,9 +30,9 @@ describe('Carousel component', () => {
 
   it('should render', () => {
     expect(wrapper.exists()).toBe(true);
-  })
+  });
 
   it('should render the carousel', () => {
     expect(wrapper.find(Carousel.Item).exists()).toBe(true);
-  })
+  });
 });

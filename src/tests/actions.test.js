@@ -1,4 +1,4 @@
-import * as actions from '../actions/index'
+import * as actions from '../actions/index';
 
 describe('actions', () => {
   it('should create an action to change the animals state', () => {
@@ -83,30 +83,30 @@ describe('actions', () => {
           href: '/v2/organizations/nj333',
         },
       },
-    }
+    };
 
     const expectedAction = {
       type: 'RECEIVE_PETS',
-      animals: json.animals
-    }
-    expect(actions.receivePets(json)).toEqual(expectedAction)
-  })
+      animals: json.animals,
+    };
+    expect(actions.receivePets(json)).toEqual(expectedAction);
+  });
 
   it('should create an action to change the static filter', () => {
-    const staticFilter = 'type'
+    const staticFilter = 'type';
     const expectedAction = {
       type: 'CHANGE_FILTER',
-      staticFilter
-    }
-    expect(actions.changeFilter(staticFilter)).toEqual(expectedAction)
-  })
+      staticFilter,
+    };
+    expect(actions.changeFilter(staticFilter)).toEqual(expectedAction);
+  });
 
   it('should create an action to change the dinamic filter', () => {
-    const dinamicFilter = 'Cat'
+    const dinamicFilter = 'Cat';
     const expectedAction = {
       type: 'CHANGE_DINAMIC_FILTER',
-      dinamicFilter
-    }
-    expect(actions.changeDinamicFilter(dinamicFilter)).toEqual(expectedAction)
-  })
-})
+      dinamicFilter,
+    };
+    expect(actions.changeDinamicFilter(dinamicFilter)).toEqual(expectedAction);
+  });
+});
