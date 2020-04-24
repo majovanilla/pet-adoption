@@ -1,4 +1,9 @@
-const initState = {
+export const initFilterState = {
+  staticFilter: 'all',
+  dinamicFilter: '',
+};
+
+export const initPetState = {
   animals:
     [
       {
@@ -495,5 +500,3 @@ const initState = {
       },
     ],
 };
-
-export default initState;

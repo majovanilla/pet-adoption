@@ -23,10 +23,12 @@ const SearchBar = props => {
   };
 
   return (
-    <div className={`${searchBar.searchBar} mx-auto col-lg-9 my-3`}>
-      <h2 className="mb-3">Search Parameters</h2>
-      <Filter handleChange={handleChange} />
-      <DinamicFilter staticFilter={staticFilter} handleChange={handleChange} />
+    <div className={`${searchBar.searchBar} mx-auto col-12 my-3`}>
+      <h2 className="col-6 mb-3 align-self-center">Find your next best friend</h2>
+      <div className="d-flex flex-column col-6">
+        <Filter handleChange={handleChange} />
+        <DinamicFilter staticFilter={staticFilter} handleChange={handleChange} />
+      </div>
     </div>
   );
 };

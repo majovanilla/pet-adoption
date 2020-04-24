@@ -7,7 +7,7 @@ const Filter = props => {
   const { handleChange } = props;
 
   return (
-    <Form.Control as="select" size="lg" custom name="category" className="col-4 mb-3" onChange={handleChange}>
+    <Form.Control as="select" size="lg" custom name="category" className="mb-3" onChange={handleChange}>
       {
       categories.map((category, index) => {
         const categoryKey = `CATEGORY_${index}`;
