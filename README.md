@@ -7,6 +7,8 @@ That's why I connnected with an API that helps people find pets to adopt.
 The app renders a list of pets and the user can filter them by type, gender, size, and age.
 When you click on the name of the pet, you can see the detailed information about the animal and how to adopt it (contact information).npm
 
+You can watch a video of me explaining the video [here](https://www.loom.com/share/19850f2e1b0e419eb688f1ef77f07eaf)
+
 ![screenshot](./images/sc1.png)
 ![screenshot](./images/sc1.png)
 
@@ -43,6 +45,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
+
+### Testing
+
+- Run `npm test` in your terminal (check that you are in the repo's folder) to run all the testing suite.
 
 
 ## Author
