@@ -1,0 +1,37 @@
+.carouselImage {
+  height: 50%;
+}
+
+.carouselItem {
+  max-height: 90vh;
+}
+
+.carouselText {
+  color: black;
+}
+
+.detailsLinks {
+  padding: 0.5rem 1rem;
+  height: 50px;
+  background-color: gray;
+
+  a {
+    color: white;
+  }
+}
+
+.socialDetails {
+  background: gray;
+  bottom: 0;
+  position: fixed;
+}
+
+.description {
+  padding: 2rem;
+}
+
+.contactIcon {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+}
